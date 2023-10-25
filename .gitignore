@@ -2,3 +2,5 @@ alpine-make-rootfs
 alpine-make-rootfs-d
 rootfs.tar.gz
 rootfs.tar.gz.sha256
+*.tar.zst
+arch

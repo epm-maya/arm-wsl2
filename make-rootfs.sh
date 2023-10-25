@@ -1,6 +1,14 @@
 #!/bin/sh
 set -eux
 
+rm rootfs.tar.gz || true
+rm rootfs.tar.gz.sha256 || true
+
+cd content
+rm pkg.tar.zst || true
+curl -fsL https://archlinux.org/packages/extra/x86_64/qemu-user-static/download/ -o pkg.tar.zst
+cd ..
+
 sudo ./alpine-make-rootfs \
 	--branch 'v3.18' \
 	--packages 'apk-tools curl tar xz zstd git openssh-client' \
