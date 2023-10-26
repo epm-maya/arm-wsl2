@@ -11,7 +11,7 @@ cd ..
 
 sudo ./alpine-make-rootfs \
 	--branch 'v3.18' \
-	--packages 'apk-tools curl tar xz zstd git openssh-client' \
+	--packages 'apk-tools curl tar xz zstd sudo vim git openssh-client' \
 	--script-chroot \
 	rootfs.tar.gz -- content/alpine.sh
 
